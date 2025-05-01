@@ -3,6 +3,7 @@ import requests
 import re
 import xarray as xr
 import logging
+import numpy as np 
 
 import warnings
 
@@ -118,7 +119,7 @@ def calculate_gdd(tmin, tmax, tbase, tupper=30):
     return gdd
 
 
-def calculate_degree_days(df,tmin, tmax , base_temp=13.0, column='t2m'):
+def calculate_degree_days(df,tmin, tmax , base_temp=10.0, column='t2m'):
     """
     Calculate Heating, Cooling, and Growing Degree Days
     
